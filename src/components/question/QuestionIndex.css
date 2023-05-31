@@ -23,3 +23,12 @@
     justify-content: center;
     font-size: large;
 }
+
+.new-question{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    cursor: pointer;
+    color: blueviolet;
+}

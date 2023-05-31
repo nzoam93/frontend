@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import NewQuestion from './NewQuestion';
 import "./QuestionIndex.css";
 import QuestionIndexItem from './QuestionIndexItem';
 
@@ -12,10 +13,10 @@ const QuestionIndex = () => {
 
     //Make a fetch requset to the Rails API endpoint
     useEffect(() => {
-        fetch('api/questions')
+        // fetch('api/questions')
         // fetch ('/api/questions) should work because we have set up the proxy
         //but that's not working so we will just add the full api instead
-        // fetch ('http://localhost:3001/api/questions')
+        fetch ('/api/questions')
             .then(response => response.json())
             .then(data => setQuestions(data))
             .catch(error => console.log(error));
@@ -28,18 +29,21 @@ const QuestionIndex = () => {
 
   //Render the list of questions
   return (
-    <div className='question'>
-        <div className='question-header'>Questions</div>
-        {<QuestionIndexItem 
-          question={questions[questionNumber]} 
-          questionNumber={questionNumber}
-          setQuestionNumber={setQuestionNumber}
-          numberOfQuestions={numberOfQuestions}
-          points={points} 
-          setPoints={setPoints}/>}
-        
-        <div className='points'>{points} Points</div>
-    </div>
+    <>
+      <div className='question'>
+          <div className='question-header'>Questions</div>
+          {<QuestionIndexItem 
+            question={questions[questionNumber]} 
+            questionNumber={questionNumber}
+            setQuestionNumber={setQuestionNumber}
+            numberOfQuestions={numberOfQuestions}
+            points={points} 
+            setPoints={setPoints}/>}
+          
+          <div className='points'>{points} Points</div>
+          <div className='new-question'> <NewQuestion/> </div>
+      </div>
+    </>
   )
 }
 
