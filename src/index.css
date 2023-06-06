@@ -72,6 +72,11 @@ table {
 	background-position: right center;
 }
 
-body{
+/* body{
 	background-color: rgb(182, 205, 212);
+} */
+
+/*Adding for env purposes*/
+body{
+	background-color: var(--BACKGROUND_COLOR);
 }
