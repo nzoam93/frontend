@@ -19,3 +19,8 @@ const backgroundColor = process.env.BACKGROUND_COLOR || 'rgb(182, 205, 212)';
 
 // Set the CSS variable
 document.documentElement.style.setProperty('--BACKGROUND_COLOR', backgroundColor);
+
+console.log('process.env.background')
+console.log(process.env.BACKGROUND_COLOR)
+console.log('backgroundColor')
+console.log(backgroundColor)
