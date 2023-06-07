@@ -43,7 +43,7 @@ const NewQuestion = () => {
                 return response.json();
             })
             .then(data => {
-                console.log('Question submitted:', data);
+                // console.log('Question submitted:', data);
                 // Additional logic or actions upon successful submission
             })
             .catch(error => {

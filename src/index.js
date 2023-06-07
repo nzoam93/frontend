@@ -20,5 +20,5 @@ const backgroundColor = process.env.REACT_APP_BACKGROUND_COLOR || 'rgb(182, 205,
 // Set the CSS variable
 document.documentElement.style.setProperty('--REACT_APP_BACKGROUND_COLOR', backgroundColor);
 
-console.log('process.env.background: ', process.env.REACT_APP_BACKGROUND_COLOR)
-console.log('background Color: ', backgroundColor)
+// console.log('process.env.background: ', process.env.REACT_APP_BACKGROUND_COLOR)
+// console.log('background Color: ', backgroundColor)

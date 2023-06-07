@@ -7,7 +7,7 @@ const QuestionIndexItem = ({question, questionNumber, setQuestionNumber, numberO
     const [selectedAnswer, setSelectedAnswer] = useState();
 
     const answerClick = (e) => {
-        console.log(question)
+        // console.log(question)
         setSelectedAnswer(e.target.innerText);
         // e.target.style.color = "green";
     }
