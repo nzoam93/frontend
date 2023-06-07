@@ -6,9 +6,14 @@ const BackendStatement = () => {
 
     useEffect(() => {
         fetch('/api/backend-statement')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not OK');
+                }
+                return response.json();
+            })
             .then(data => setStatement(data))
-            // .catch(error => console.log(error));
+            .catch(error => console.log(error));
     }, []);
 
     return (
