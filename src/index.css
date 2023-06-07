@@ -78,5 +78,5 @@ table {
 
 /*Adding for env purposes*/
 body{
-	background-color: var(--BACKGROUND_COLOR);
+	background-color: var(--REACT_APP_BACKGROUND_COLOR);
 }
