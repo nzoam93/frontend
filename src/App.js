@@ -1,6 +1,7 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
 import BackendStatement from "./components/backend-statement/BackendStatement";
+import HelloWorld from "./components/helloWorld/HelloWorld";
 import QuestionIndex from "./components/question/QuestionIndex";
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
         </Route>
         <Route exact path="/backend-statement">
             <BackendStatement/>
+        </Route>
+        <Route exact path="/hello">
+            <HelloWorld />
         </Route>
       </Switch>
     </div>
