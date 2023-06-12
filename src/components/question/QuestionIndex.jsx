@@ -11,7 +11,7 @@ const QuestionIndex = () => {
 
     const numberOfQuestions = Object.values(questions).length;
 
-    //Make a fetch requset to the Rails API endpoint
+    //Make a fetch requset to the backend API endpoint
     useEffect(() => {
         fetch ('/api/questions')
             .then(response => response.json())

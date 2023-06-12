@@ -8,8 +8,10 @@ function App() {
     <div className="App">
       <Switch >
         <Route exact path="/">
-            <BackendStatement/>
             <QuestionIndex/>
+        </Route>
+        <Route exact path="/backend-statement">
+            <BackendStatement/>
         </Route>
       </Switch>
     </div>
