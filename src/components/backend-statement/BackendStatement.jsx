@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "./BackendStatement.css";
 
 const BackendStatement = () => {
-    const [statement, setStatement] = useState('');
+    const [statement, setStatement] = useState("");
 
     useEffect(() => {
         fetch('/api/backend-statement')
@@ -18,12 +18,14 @@ const BackendStatement = () => {
     }, []);
 
     if(!statement){
+        console.log("hi from !statement")
         return null;
     }
 
     return (
         <div>
-            <p className='backend-statement'>{statement}</p>
+            note: String(statement) below so that we avoid the React error of returning an object
+            <p className='backend-statement'>{String(statement)}</p>
         </div>
     );
 };
