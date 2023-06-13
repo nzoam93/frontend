@@ -18,7 +18,6 @@ const BackendStatement = () => {
     }, []);
 
     if(!statement){
-        console.log("hi from !statement")
         return null;
     }
 
@@ -26,8 +25,8 @@ const BackendStatement = () => {
 
     return (
         <div>
-            {/* note: String(statement) below so that we avoid the React error of returning an object */}
-            <p className='backend-statement'>{String(statement)}</p>
+            {/* note: statement.statement below because statement is an object with a key of statement that I am keying into */}
+            <p className='backend-statement'>{statement.statement}</p>
         </div>
     );
 };
