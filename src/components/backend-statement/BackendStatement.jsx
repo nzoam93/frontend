@@ -22,6 +22,8 @@ const BackendStatement = () => {
         return null;
     }
 
+    console.log(statement)
+
     return (
         <div>
             {/* note: String(statement) below so that we avoid the React error of returning an object */}
