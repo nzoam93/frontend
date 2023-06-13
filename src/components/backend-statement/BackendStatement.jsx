@@ -24,7 +24,7 @@ const BackendStatement = () => {
 
     return (
         <div>
-            note: String(statement) below so that we avoid the React error of returning an object
+            {/* note: String(statement) below so that we avoid the React error of returning an object */}
             <p className='backend-statement'>{String(statement)}</p>
         </div>
     );
